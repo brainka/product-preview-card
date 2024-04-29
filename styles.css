@@ -1,0 +1,139 @@
+:root {
+	--cream-color: #f2eae2;
+	--pure-white: #ffffff;
+	--dark-aquamarine: #3d8168;
+	--light-aquamarine: #1a4032;
+	--gunmetal: #1c232b;
+	--aurometal-saurus: #6c7289;
+
+	--main-font: 'Montserrat', sans-serif;
+	--secondary-font: 'Fraunces', serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1rem;
+	height: 100vh;
+	background-color: var(--cream-color);
+	font-family: var(--main-font);
+}
+
+main {
+	display: flex;
+	width: 100%;
+	max-width: 60rem;
+	height: 45rem;
+	border-radius: 1rem;
+	background-color: var(--pure-white);
+	overflow: hidden;
+}
+
+section {
+	padding: 3.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+	object-fit: cover;
+}
+
+h1 {
+	font-size: 1.2rem;
+	color: var(--aurometal-saurus);
+	font-weight: 500;
+	letter-spacing: 0.8rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+	font-family: var(--secondary-font);
+}
+
+p {
+	font-size: 1.4rem;
+	color: var(--aurometal-saurus);
+	line-height: 2.1rem;
+}
+
+.price-container {
+	display: flex;
+	gap: 1.9rem;
+}
+
+#current-price {
+	font-size: 3.2rem;
+	color: var(--dark-aquamarine);
+	font-family: var(--secondary-font);
+	font-weight: 700;
+}
+
+#previous-price {
+	font-size: 1.3rem;
+	color: var(--aurometal-saurus);
+	text-decoration: line-through;
+	align-self: center;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.1rem;
+	width: 100%;
+	padding: 1.5rem 0;
+	font-size: 1.4rem;
+	background-color: var(--dark-aquamarine);
+	color: var(--pure-white);
+	border-radius: 0.8rem;
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+button:hover {
+	background-color: var(--light-aquamarine);
+}
+
+@media screen and (max-width: 375px) {
+	body {
+		padding: 2.8rem 1.6rem;
+		min-width: 32rem;
+	}
+
+	main {
+		flex-direction: column;
+		height: 61.1rem;
+	}
+
+	section {
+		padding: 2.4rem;
+		height: 100%;
+	}
+
+	main > img {
+		width: 34.3rem;
+		height: 24rem;
+		object-position: medium left;
+	}
+
+	h2 {
+		font-size: 2.8rem;
+	}
+}
